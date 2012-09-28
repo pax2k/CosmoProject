@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>no.pax.cosmo.server</groupId>
+    <artifactId>websocket</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <jetty-version>7.5.0.v20110901</jetty-version>
+    </properties>
+
+    <name>websocket</name>
+    <url>http://maven.apache.org</url>
+
+    <build>
+        <defaultGoal>package</defaultGoal>
+        <plugins>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <!-- best lock down version of the plugin too -->
+            <configuration>
+                <source>1.5</source>
+                <target>1.5</target>
+            </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-websocket</artifactId>
+            <version>${jetty-version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>${jetty-version}</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>server</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <configuration>
+                            <executable>java</executable>
+                            <arguments>
+                                <argument>-showversion</argument>
+                                <argument>-Xmx512m</argument>
+                                <argument>-Xms512m</argument>
+                                <argument>-Xmn256m</argument>
+                                <argument>-XX:+PrintCommandLineFlags</argument>
+                                <argument>-verbose:gc</argument>
+                                <!--<argument>-XX:+PrintGCDetails</argument>-->
+                                <!--<argument>-XX:+PrintGCDateStamps</argument>-->
+                                <argument>-XX:+UseParallelOldGC</argument>
+                                <argument>-XX:-UseAdaptiveSizePolicy</argument>
+                                <!--<argument>-XX:+UseConcMarkSweepGC</argument>-->
+                                <!--<argument>-XX:+UnlockExperimentalVMOptions</argument>-->
+                                <!--<argument>-XX:+UseG1GC</argument>-->
+                                <argument>-cp</argument>
+                                <classpath/>
+                                <argument>no.pax.cosmo.Main</argument>
+                                <argument>8080</argument>
+                            </arguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
+
