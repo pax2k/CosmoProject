@@ -14,6 +14,14 @@
     <name>websocket</name>
     <url>http://maven.apache.org</url>
 
+    <repositories>
+        <repository>
+            <id>javacpp</id>
+            <name>JavaCPP</name>
+            <url>http://maven2.javacpp.googlecode.com/git/</url>
+        </repository>
+    </repositories>
+
     <build>
         <defaultGoal>package</defaultGoal>
         <plugins>
@@ -51,6 +59,12 @@
             <version>${jetty-version}</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.5</version>
+        </dependency>
+
     </dependencies>
 
     <profiles>

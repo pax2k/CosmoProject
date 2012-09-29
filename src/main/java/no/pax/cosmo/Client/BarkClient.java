@@ -1,5 +1,6 @@
 package no.pax.cosmo.Client;
 
+import no.pax.cosmo.Util.Util;
 import org.eclipse.jetty.websocket.WebSocket;
 import org.eclipse.jetty.websocket.WebSocketClient;
 import org.eclipse.jetty.websocket.WebSocketClientFactory;
@@ -20,7 +21,7 @@ public class BarkClient implements WebSocket.OnTextMessage, BarkListener {
         factory.start();
 
         WebSocketClient client = factory.newWebSocketClient();
-        client.setMaxIdleTime(600000);
+        client.setMaxIdleTime(Util.DEFAULT_IDLE_TIME);
         client.setProtocol("cosmo");
 
         final String host = "localhost";
@@ -29,7 +30,6 @@ public class BarkClient implements WebSocket.OnTextMessage, BarkListener {
         connection = client.open(new URI(connectionPath), this).get();
 
         detection = new BarkDetection(this);
-
     }
 
     public void send(String message) throws IOException {
@@ -60,7 +60,6 @@ public class BarkClient implements WebSocket.OnTextMessage, BarkListener {
         BarkClient client = new BarkClient();
     }
 
-    @Override
     public void newNumberOfBarks() {
         try {
             send(String.valueOf("BARK" + detection.getBarkCounter()));

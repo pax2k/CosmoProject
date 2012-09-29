@@ -1,6 +1,8 @@
 package no.pax.cosmo.server;
 
 
+import no.pax.cosmo.Util.Util;
+import org.apache.commons.codec.binary.Base64;
 import org.eclipse.jetty.websocket.WebSocket;
 import org.eclipse.jetty.websocket.WebSocketFactory;
 
@@ -8,7 +10,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
@@ -48,7 +53,7 @@ public class CosmoServlet extends HttpServlet {
                 return null;
             }
         });
-        _wsFactory.setMaxIdleTime(600000);
+        _wsFactory.setMaxIdleTime(Util.DEFAULT_IDLE_TIME);
 
     }
 
@@ -109,21 +114,12 @@ public class CosmoServlet extends HttpServlet {
          */
         public void onMessage(String data) {
             System.out.println("Got data: " + data);
-            String messageTosend = "";
-
-            if (data.equals("getBark")) {
-                messageTosend = data;
-            } else if (data.startsWith("BARK")) {
-                messageTosend = data;
-            }
-
-            sendDataToClients(messageTosend);
+            sendDataToClients(data);  // todo handle different clients
         }
 
         private void sendDataToClients(String messageTosend) {
             for (CosmoWebSocket member : _members) {
                 try {
-
                     member._connection.sendMessage(messageTosend);
                 } catch (IOException e) {
                     e.printStackTrace();

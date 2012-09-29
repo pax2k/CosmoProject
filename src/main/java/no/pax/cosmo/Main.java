@@ -1,7 +1,15 @@
 package no.pax.cosmo;
 
 import no.pax.cosmo.server.CosmoServer;
+import org.apache.commons.codec.binary.Base64;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Scanner;
 
 public class Main {
@@ -21,7 +29,7 @@ public class Main {
 
     private void startEmbeddedServer() throws Exception {
         Runnable serverRunnable = new Runnable() {
-            @Override
+
             public void run() {
                 try {
                     server = new CosmoServer();
