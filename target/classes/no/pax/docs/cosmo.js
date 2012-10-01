@@ -23,26 +23,26 @@ var connection = {
 
     onopen:function () {
         connectionStatus.innerHTML = 'Connected';
-        this.send("getBark");
+        sendMessage("BARK_CLIENT", "0");
         getImage();
     },
-
     send:function (message) {
         this._ws.send(message);
     },
     onmessage:function (m) {
-        if (m.data) {
-            var message = m.data;
-            if (message.substring(0, 4) == 'BARK') {
-                fromServerElement.innerHTML = message.substring(4);
-            }  else{
-                theImage.src = "data:text/jpeg;base64," + message;
-            }
+        var obj = eval("(" + m.data + ')');     // eval is evil use JQuery method or something like that.
+        var sentTo = obj.to;
+        var sendFrom = obj.from;
+        var sentValue = obj.value;
 
-            console.log("GOT MESSAGE" + message);
+        if (sentTo == 'WEB_VIEW_CLIENT') {
+            if (sendFrom == 'BARK_CLIENT') {
+                fromServerElement.innerHTML = sentValue;
+            } else if (obj.from == 'WEB_CAM_CLIENT') {
+                theImage.src = "data:text/jpeg;base64," + sentValue;
+            }
         }
     },
-
     onclose:function () {
         connectionStatus.innerHTML = 'Closed';
         this._ws = null;
@@ -56,11 +56,11 @@ function init() {
     connection.initConnection();
 }
 
-function sendMessage(message) {
-    connection.send(message);
+function sendMessage(to, message) {
+    connection.send("{'to' : '" + to + "', 'value' : '" + message + "'}");
 }
 
 function getImage() {
-    sendMessage("getImage");
+    sendMessage("WEB_CAM_CLIENT", "0");
 }
       

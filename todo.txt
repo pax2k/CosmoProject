@@ -1,0 +1,11 @@
+Web/clients:
+Handle reconnect
+Implement "ping" (if needed)
+
+Server:
+Create a map of ID and connection in order to send messages directly
+
+Maven:
+DONE Include jar files from lib.
+Install included jar files to repo, needed. See http://gaertig.pl/blog/en/2009/07/how-to-use-jars-stored-in-maven-project-directory.html
+Start Bark and WebCam from maven profiles, easy to do when jars are installed

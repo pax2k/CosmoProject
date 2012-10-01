@@ -5,11 +5,9 @@ import org.apache.commons.codec.binary.Base64;
 import org.eclipse.jetty.websocket.WebSocket;
 import org.eclipse.jetty.websocket.WebSocketClient;
 import org.eclipse.jetty.websocket.WebSocketClientFactory;
+import org.json.JSONObject;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URI;
 
 
@@ -53,17 +51,20 @@ public class WebCamClient implements WebSocket.OnTextMessage {
     }
 
     public void onMessage(String data) {
-        if (data.equals("getImage")) {
-            final boolean savedImage = webCam.saveSnapShot();
+        JSONObject object = Util.convertToJSon(data);
+        final String value = Util.getValueFromJSon(object, "to");
 
-            if (savedImage) {
-                File f = new File("ray.jpg");
-                final byte[] bytesFromFile;
+        if (value.equals(Util.WEB_CAM_CLIENT_NAME)) {
+            final byte[] newImage = webCam.getSnapShot();
 
+            if (newImage != null) {
                 try {
-                    bytesFromFile = getBytesFromFile(f);
-                    final String message = Base64.encodeBase64String(bytesFromFile);
-                    send(message);
+                    final String message = Base64.encodeBase64String(newImage);
+                    final String sendStringAsJSon = Util.getSendStringAsJSon(
+                            Util.WEB_VIEW_CLIENT_NAME,
+                            Util.WEB_CAM_CLIENT_NAME, message);
+
+                    send(sendStringAsJSon);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -75,41 +76,5 @@ public class WebCamClient implements WebSocket.OnTextMessage {
 
     public void disconnect() throws IOException {
         connection.disconnect();
-    }
-
-    // Returns the contents of the file in a byte array.
-    public byte[] getBytesFromFile(File file) throws IOException {
-        InputStream is = new FileInputStream(file);
-
-        // Get the size of the file
-        long length = file.length();
-
-        // You cannot create an array using a long type.
-        // It needs to be an int type.
-        // Before converting to an int type, check
-        // to ensure that file is not larger than Integer.MAX_VALUE.
-        if (length > Integer.MAX_VALUE) {
-            // File is too large
-        }
-
-        // Create the byte array to hold the data
-        byte[] bytes = new byte[(int) length];
-
-        // Read in the bytes
-        int offset = 0;
-        int numRead = 0;
-        while (offset < bytes.length
-                && (numRead = is.read(bytes, offset, bytes.length - offset)) >= 0) {
-            offset += numRead;
-        }
-
-        // Ensure all the bytes have been read in
-        if (offset < bytes.length) {
-            throw new IOException("Could not completely read file " + file.getName());
-        }
-
-        // Close the input stream and return bytes
-        is.close();
-        return bytes;
     }
 }

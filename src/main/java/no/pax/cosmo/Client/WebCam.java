@@ -15,6 +15,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicReference;
@@ -76,21 +77,26 @@ public final class WebCam  {
         }).start();
     }
 
-    public boolean saveSnapShot() {
-        final File file = new File("ray.jpg");
-        final VideoFrame clone = VideoFrameFactory.clone(lastFrameRef.get());
+    public byte[] getSnapShot() {
 
         try {
+            final VideoFrame clone = VideoFrameFactory.clone(lastFrameRef.get());
             final BufferedImage bufferedImage = VideoFrameFactory.toBufferedImage(clone);
             final BufferedImage scaledImage = resizeImage(bufferedImage, bufferedImage.getType());
-            ImageIO.write(scaledImage, "jpg", file);
 
-            return true;
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            ImageIO.write( scaledImage, "jpg", baos );
+            baos.flush();
+
+            byte[] imageInByte = baos.toByteArray();
+            baos.close();
+
+            return imageInByte;
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
 
-        return false;
+        return null;
     }
 
     private static BufferedImage resizeImage(BufferedImage originalImage, int type){

@@ -64,7 +64,25 @@
             <artifactId>commons-codec</artifactId>
             <version>1.5</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20090211</version>
+        </dependency>
+        <dependency>
+            <groupId>bridj</groupId>
+            <artifactId>bridj</artifactId>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/bridj-0.7-120301.jar</systemPath>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>juv-webcam</groupId>
+            <artifactId>juv-webcam</artifactId>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/juv-webcam-sdk-1.0.2.jar</systemPath>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <profiles>
@@ -101,6 +119,40 @@
                 </plugins>
             </build>
         </profile>
+
+        <profile>
+            <id>webcam</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <configuration>
+                            <executable>java</executable>
+                            <arguments>
+                                <argument>-showversion</argument>
+                                <argument>-Xmx512m</argument>
+                                <argument>-Xms512m</argument>
+                                <argument>-Xmn256m</argument>
+                                <argument>-XX:+PrintCommandLineFlags</argument>
+                                <argument>-verbose:gc</argument>
+                                <!--<argument>-XX:+PrintGCDetails</argument>-->
+                                <!--<argument>-XX:+PrintGCDateStamps</argument>-->
+                                <argument>-XX:+UseParallelOldGC</argument>
+                                <argument>-XX:-UseAdaptiveSizePolicy</argument>
+                                <!--<argument>-XX:+UseConcMarkSweepGC</argument>-->
+                                <!--<argument>-XX:+UnlockExperimentalVMOptions</argument>-->
+                                <!--<argument>-XX:+UseG1GC</argument>-->
+                                <argument>-cp</argument>
+                                <classpath/>
+                                <argument>no.pax.cosmo.Client.WebCamClient</argument>
+                            </arguments>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
     </profiles>
 </project>
 

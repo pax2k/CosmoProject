@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Maven: bridj:bridj:1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/bridj-0.7-120301.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -4,6 +4,7 @@ import no.pax.cosmo.Util.Util;
 import org.eclipse.jetty.websocket.WebSocket;
 import org.eclipse.jetty.websocket.WebSocketClient;
 import org.eclipse.jetty.websocket.WebSocketClientFactory;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URI;
@@ -45,10 +46,11 @@ public class BarkClient implements WebSocket.OnTextMessage, BarkListener {
     }
 
     public void onMessage(String data) {
-        if (data.equals("getBark")) {
+        JSONObject object = Util.convertToJSon(data);
+        final String value = Util.getValueFromJSon(object, "to");
+
+        if (value.equals(Util.BARK_CLIENT_NAME)) {
             newNumberOfBarks();
-        } else {
-            System.out.println("Do nothing");
         }
     }
 
@@ -57,12 +59,13 @@ public class BarkClient implements WebSocket.OnTextMessage, BarkListener {
     }
 
     public static void main(String... arg) throws Exception {
-        BarkClient client = new BarkClient();
+        new BarkClient();
     }
 
     public void newNumberOfBarks() {
         try {
-            send(String.valueOf("BARK" + detection.getBarkCounter()));
+            final String sendStringAsJSon = Util.getSendStringAsJSon(Util.WEB_VIEW_CLIENT_NAME, Util.BARK_CLIENT_NAME, String.valueOf(detection.getBarkCounter()));
+            send(sendStringAsJSon);
         } catch (IOException e) {
             e.printStackTrace();
         }

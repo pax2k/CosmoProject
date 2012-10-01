@@ -2,14 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6f3c702-811d-46a4-b2a1-057b8cb8d5c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCam.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCamClient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/todo.txt" />
+      <change type="DELETED" beforePath="C:\workspace\fagprosjekt\CosmoProject\ray.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\fagprosjekt\CosmoProject\rayTEMP.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/BarkClient.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/BarkClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam$1$1$1.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam$1$1.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam$1$2.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam$1.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCamClient.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Client/WebCamClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Util/Util.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/Util/Util.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/server/CosmoServlet$1.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/server/CosmoServlet$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/server/CosmoServlet$CosmoWebSocket.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/server/CosmoServlet$CosmoWebSocket.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/cosmo/server/CosmoServlet.class" afterPath="$PROJECT_DIR$/target/classes/no/pax/cosmo/server/CosmoServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/websocket-0.0.1-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/websocket-0.0.1-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/BarkClient.java" afterPath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/BarkClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Main.java" afterPath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCam.java" afterPath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCam.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCamClient.java" afterPath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCamClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Util/Util.java" afterPath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Util/Util.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServlet.java" afterPath="$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/no/pax/docs/cosmo.js" afterPath="$PROJECT_DIR$/src/main/resources/no/pax/docs/cosmo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/no/pax/docs/index.html" afterPath="$PROJECT_DIR$/src/main/resources/no/pax/docs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/pax/docs/cosmo.js" afterPath="$PROJECT_DIR$/target/classes/no/pax/docs/cosmo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/websocket.iml" afterPath="$PROJECT_DIR$/websocket.iml" />
     </list>
     <ignored path="websocket.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,6 +45,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Util/Util.java" line="30" class="no.pax.cosmo.Util.Util" package="no.pax.cosmo.Util">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -67,28 +100,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="24" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebCamClient.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WebCamClient.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCamClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="19" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CosmoServer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="12" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
+            <state line="18" column="15" selection-start="518" selection-end="518" vertical-scroll-proportion="0.25718608">
               <folding />
             </state>
           </provider>
@@ -97,52 +112,54 @@
       <file leaf-file-name="CosmoServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="39" selection-start="2089" selection-end="2111" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="35" column="34" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#702#718#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BarkDetection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/BarkDetection.java">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="7" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+            <state line="25" column="25" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BarkClient.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="todo.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/todo.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="77" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BarkClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/BarkClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="24" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.6526674">
+            <state line="35" column="17" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cosmo.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/no/pax/docs/cosmo.js">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="44" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.0">
+            <state line="22" column="14" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/no/pax/docs/index.html">
+      <file leaf-file-name="README.TXT" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.TXT">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="11" selection-start="977" selection-end="977" vertical-scroll-proportion="-23.538462">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Util.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Util/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="45" selection-start="118" selection-end="135" vertical-scroll-proportion="0.0">
+            <state line="11" column="11" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,14 +168,8 @@
       <file leaf-file-name="WebCam.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="16" selection-start="3505" selection-end="3505" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#635#643#0" expanded="true" />
-                <element signature="e#719#731#0" expanded="true" />
-                <element signature="e#1447#2064#0" expanded="true" />
-                <element signature="e#2033#2034#0" expanded="true" />
-              </folding>
+            <state line="85" column="9" selection-start="3403" selection-end="3403" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,22 +188,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/BarkListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/BarkDetection.java" />
         <option value="$PROJECT_DIR$/src/main/resources/no/pax/docs/cosmo.css" />
         <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServer.java" />
         <option value="$PROJECT_DIR$/README.TXT" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCamListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCam.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/no/pax/docs/cosmo.js" />
         <option value="$PROJECT_DIR$/src/main/resources/no/pax/docs/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Util/Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/BarkClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Util/Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCam.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCamClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/no/pax/docs/cosmo.js" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/todo.txt" />
+        <option value="$PROJECT_DIR$/../../work/UlsteinProject/www/ArduinoMotor/arduino.html" />
       </list>
     </option>
   </component>
@@ -204,10 +215,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="height" value="1216" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -235,18 +246,19 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="websocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="websocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -408,6 +420,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="websocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CosmoProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -427,9 +463,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -440,56 +476,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.BarkClient">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.example.websocket.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="no.pax.cosmo.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="websocket" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ChatLoadClient" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.example.websocket.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="no.pax.cosmo.ChatLoadClient" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="websocket" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="BarkClient" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -508,7 +494,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="websocket" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -562,6 +554,54 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="CosmoServlet" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="no.pax.cosmo.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="no.pax.cosmo.server.CosmoServlet" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="websocket" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="no.pax.cosmo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="no.pax.cosmo.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="websocket" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -582,24 +622,6 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -636,6 +658,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -653,17 +693,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -693,12 +722,23 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ChatLoadClient" />
-      <item index="2" class="java.lang.String" itemvalue="Application.BarkClient" />
-      <item index="3" class="java.lang.String" itemvalue="Application.WebCam" />
-      <item index="4" class="java.lang.String" itemvalue="Application.WebCamClient" />
+      <item index="0" class="java.lang.String" itemvalue="Application.BarkClient" />
+      <item index="1" class="java.lang.String" itemvalue="Application.WebCam" />
+      <item index="2" class="java.lang.String" itemvalue="Application.WebCamClient" />
+      <item index="3" class="java.lang.String" itemvalue="Application.CosmoServlet" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -739,14 +779,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <frame x="1912" y="-8" width="1936" height="1216" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28219697" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -759,8 +799,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20886752" sideWeight="0.6732892" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32671082" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20886752" sideWeight="0.67329544" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32670453" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -827,118 +867,109 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/no/pax/docs/cosmo.css">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-websocket/7.5.0.v20110901/jetty-websocket-7.5.0.v20110901.jar!/org/eclipse/jetty/websocket/WebSocketFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="16" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2185" selection-end="2185" vertical-scroll-proportion="0.5868331">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../juv-webcam-sdk-1.0.2/samples/src/ExNativeAccessWebcam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="70" selection-start="2875" selection-end="2887" vertical-scroll-proportion="-7.44">
-          <folding>
-            <element signature="e#2909#2921#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ray.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../juv-webcam-sdk-1.0.2/lib/juv-webcam-sdk-1.0.2.jar!/com/smaxe/uv/media/VideoFrameFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="162" selection-end="162" vertical-scroll-proportion="0.1218638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../juv-webcam-sdk-1.0.2/lib/juv-webcam-sdk-1.0.2.jar!/com/smaxe/uv/media/core/VideoFrame.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="263" selection-end="269" vertical-scroll-proportion="-4.76">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="12" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="45" selection-start="118" selection-end="135" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="39" selection-start="2089" selection-end="2111" vertical-scroll-proportion="0.0">
+        <state line="40" column="19" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.41580042">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/BarkDetection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="7" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+        <state line="24" column="7" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/no/pax/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="11" selection-start="977" selection-end="977" vertical-scroll-proportion="0.7241379">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="12" selection-start="995" selection-end="995" vertical-scroll-proportion="0.6069364">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="29" selection-start="459" selection-end="459" vertical-scroll-proportion="0.2957265">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/no/pax/docs/cosmo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="9" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="14" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.TXT">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="11" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="77" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/server/CosmoServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="34" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#702#718#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="25" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCam.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="16" selection-start="3505" selection-end="3505" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#635#643#0" expanded="true" />
-            <element signature="e#719#731#0" expanded="true" />
-            <element signature="e#1447#2064#0" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCamClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="19" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="24" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/no/pax/docs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="11" selection-start="977" selection-end="977" vertical-scroll-proportion="-23.538462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/no/pax/docs/cosmo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="44" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.0">
+        <state line="85" column="9" selection-start="3403" selection-end="3403" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/BarkClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="24" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.6526674">
+        <state line="35" column="17" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../work/UlsteinProject/www/ArduinoMotor/arduino.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="16" selection-start="526" selection-end="526" vertical-scroll-proportion="0.38181818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/pax/cosmo/Client/WebCamClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="15" selection-start="518" selection-end="518" vertical-scroll-proportion="0.25718608">
           <folding />
         </state>
       </provider>
