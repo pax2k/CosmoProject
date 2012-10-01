@@ -16,6 +16,12 @@
 
     <repositories>
         <repository>
+            <id>project.local</id>
+            <name>project</name>
+            <url>file:${project.basedir}/repo</url>
+        </repository>
+
+        <repository>
             <id>javacpp</id>
             <name>JavaCPP</name>
             <url>http://maven2.javacpp.googlecode.com/git/</url>
@@ -70,17 +76,13 @@
             <version>20090211</version>
         </dependency>
         <dependency>
-            <groupId>bridj</groupId>
+            <groupId>com.bridj</groupId>
             <artifactId>bridj</artifactId>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/bridj-0.7-120301.jar</systemPath>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>juv-webcam</groupId>
-            <artifactId>juv-webcam</artifactId>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/juv-webcam-sdk-1.0.2.jar</systemPath>
+            <groupId>com.juv</groupId>
+            <artifactId>juv</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>
