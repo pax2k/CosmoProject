@@ -63,4 +63,8 @@ function sendMessage(to, message) {
 function getImage() {
     sendMessage("WEB_CAM_CLIENT", "0");
 }
+
+function playSong(song) {
+    sendMessage("WEB_MUSIC_CLIENT", song);
+}
       

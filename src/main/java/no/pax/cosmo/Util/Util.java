@@ -13,6 +13,7 @@ public class Util {
     public static final String BARK_CLIENT_NAME = "BARK_CLIENT";
     public static final String WEB_CAM_CLIENT_NAME = "WEB_CAM_CLIENT";
     public static final String WEB_VIEW_CLIENT_NAME = "WEB_VIEW_CLIENT";
+    public static final String WEB_MUSIC_CLIENT_NAME = "WEB_MUSIC_CLIENT";
 
     public static JSONObject convertToJSon(String data) {
         try {
