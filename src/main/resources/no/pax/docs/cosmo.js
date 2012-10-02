@@ -13,7 +13,7 @@ var connection = {
         var location = document.location.toString()
             .replace('http://', 'ws://')
             .replace('https://', 'wss://')
-            + "cosmo";
+            + "cosmo/";
 
         this._ws = new WebSocket(location, "cosmo");
         this._ws.onopen = this.onopen;
@@ -23,8 +23,7 @@ var connection = {
 
     onopen:function () {
         connectionStatus.innerHTML = 'Connected';
-        sendMessage("BARK_CLIENT", "0");
-        getImage();
+        sendMessage("SERVER", "WEB_VIEW_CLIENT");
     },
     send:function (message) {
         this._ws.send(message);
@@ -35,12 +34,13 @@ var connection = {
         var sendFrom = obj.from;
         var sentValue = obj.value;
 
-        if (sentTo == 'WEB_VIEW_CLIENT') {
-            if (sendFrom == 'BARK_CLIENT') {
-                fromServerElement.innerHTML = sentValue;
-            } else if (obj.from == 'WEB_CAM_CLIENT') {
-                theImage.src = "data:text/jpeg;base64," + sentValue;
-            }
+        if (sendFrom == 'BARK_CLIENT') {
+            fromServerElement.innerHTML = sentValue;
+        } else if (sendFrom == 'WEB_CAM_CLIENT') {
+            theImage.src = "data:text/jpeg;base64," + sentValue;
+        } else if (sendFrom == 'SERVER') {    // registration ok
+            getBarkInfo();
+            getImage();
         }
     },
     onclose:function () {
@@ -56,8 +56,12 @@ function init() {
     connection.initConnection();
 }
 
+function getBarkInfo(){
+    sendMessage("BARK_CLIENT", "0");
+}
+
 function sendMessage(to, message) {
-    connection.send("{'to' : '" + to + "', 'value' : '" + message + "'}");
+    connection.send("{'to' : '" + to + "', 'from' : 'WEB_VIEW_CLIENT' , 'value' : '" + message + "'}");
 }
 
 function getImage() {

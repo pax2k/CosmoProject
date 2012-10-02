@@ -12,15 +12,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
+import java.sql.ClientInfoStatus;
 import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.CopyOnWriteArraySet;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 public class CosmoServlet extends HttpServlet {
     private WebSocketFactory _wsFactory;
-    private final Set<CosmoWebSocket> _members = new CopyOnWriteArraySet<CosmoWebSocket>();
+    private final Map<String, CosmoWebSocket> _members = new ConcurrentHashMap<String, CosmoWebSocket>();
 
     /**
      * Initialise the servlet by creating the WebSocketFactory.
@@ -36,8 +35,10 @@ public class CosmoServlet extends HttpServlet {
 
             public WebSocket doWebSocketConnect(HttpServletRequest request, String protocol) {
                 // Return new WebSocket for connections
-                if ("cosmo".equals(protocol))
+                if ("cosmo".equals(protocol)) {
                     return new CosmoWebSocket();
+
+                }
                 return null;
             }
         });
@@ -66,6 +67,7 @@ public class CosmoServlet extends HttpServlet {
      */
     private class CosmoWebSocket implements WebSocket.OnTextMessage {
         volatile Connection _connection;
+        volatile String connectionId;
 
         /**
          * Callback for when a WebSocket connection is opened.
@@ -74,7 +76,6 @@ public class CosmoServlet extends HttpServlet {
          */
         public void onOpen(Connection connection) {
             _connection = connection;
-            _members.add(this);
         }
 
         /**
@@ -91,16 +92,48 @@ public class CosmoServlet extends HttpServlet {
          */
         public void onMessage(String data) {
             System.out.println("Got data: " + data);
-            sendDataToClients(data);  // todo handle different clients
+
+            final JSONObject jsonObject = Util.convertToJSon(data);
+
+            try {
+                final String to = String.valueOf(jsonObject.get("to"));
+
+                if ("SERVER".equals(to)) {
+                    final String regestrationObject = String.valueOf(jsonObject.get("from"));
+                    connectionId = regestrationObject;
+                    if (!_members.containsKey(regestrationObject)) { // todo handle update AKA refresh
+                        System.out.println("new client registered " + connectionId);
+                        _members.put(regestrationObject, this);
+                        final String sendStringAsJSon = Util.getSendStringAsJSon(Util.WEB_VIEW_CLIENT_NAME, "SERVER", "OK");
+                        this.sendDataToClients(this._connection,sendStringAsJSon);
+                    } else {
+                        _members.remove(regestrationObject);
+                        _members.put(regestrationObject, this);
+                        final String sendStringAsJSon = Util.getSendStringAsJSon(Util.WEB_VIEW_CLIENT_NAME, "SERVER", "OK");
+                        this.sendDataToClients(this._connection,sendStringAsJSon);
+                    }
+                } else {
+                    final CosmoWebSocket cosmoWebSocket = _members.get(to);
+
+                    if (cosmoWebSocket != null) {
+                        sendDataToClients(cosmoWebSocket._connection, data);
+                    } else {
+                        System.out.println("Client with name: " + to + " not found...");
+                    }
+                }
+
+
+            } catch (JSONException e) {
+                System.out.println("Error during parsing: " + e.getMessage());
+            }
         }
 
-        private void sendDataToClients(String messageTosend) {
-            for (CosmoWebSocket member : _members) {
-                try {
-                    member._connection.sendMessage(messageTosend);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+        private void sendDataToClients(Connection connection, String messageTosend) {
+
+            try {
+                connection.sendMessage(messageTosend);
+            } catch (IOException e) {
+                System.out.println("Error during sending: " + e.getMessage());
             }
         }
     }
