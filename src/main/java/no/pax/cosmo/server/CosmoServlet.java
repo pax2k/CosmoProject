@@ -98,18 +98,19 @@ public class CosmoServlet extends HttpServlet {
             try {
                 final String to = String.valueOf(jsonObject.get("to"));
 
-                if ("SERVER".equals(to)) {
+                if (Util.SERVER_NAME.equals(to)) {
                     final String regestrationObject = String.valueOf(jsonObject.get("from"));
                     connectionId = regestrationObject;
+
                     if (!_members.containsKey(regestrationObject)) { // todo handle update AKA refresh
                         System.out.println("new client registered " + connectionId);
                         _members.put(regestrationObject, this);
-                        final String sendStringAsJSon = Util.getSendStringAsJSon(Util.WEB_VIEW_CLIENT_NAME, "SERVER", "OK");
+                        final String sendStringAsJSon = Util.getSendStringAsJSon(Util.WEB_VIEW_CLIENT_NAME, Util.SERVER_NAME, "OK");
                         this.sendDataToClients(this._connection,sendStringAsJSon);
                     } else {
                         _members.remove(regestrationObject);
                         _members.put(regestrationObject, this);
-                        final String sendStringAsJSon = Util.getSendStringAsJSon(Util.WEB_VIEW_CLIENT_NAME, "SERVER", "OK");
+                        final String sendStringAsJSon = Util.getSendStringAsJSon(Util.WEB_VIEW_CLIENT_NAME, Util.SERVER_NAME, "OK");
                         this.sendDataToClients(this._connection,sendStringAsJSon);
                     }
                 } else {

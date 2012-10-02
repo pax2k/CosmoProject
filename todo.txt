@@ -1,10 +1,13 @@
 Web/clients:
 Handle reconnect
 Implement "ping" (if needed)
-Refactor all music-playing to use the same mp3-player
+Refactor all music-playing clients to use the same mp3-player
+
+Javascript:
+Gather all constants to a var field
 
 Server:
-Create a map of ID and connection in order to send messages directly
+DONE Create a map of ID and connection in order to send messages directly
 
 Maven:
 DONE Include jar files from lib.

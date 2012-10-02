@@ -4,6 +4,7 @@
     <script type='text/javascript' src="cosmo.js"></script>
     <link rel="stylesheet" type="text/css" href="cosmo.css"/>
 </head>
+
 <body onload="init();"
       style="background-image: -webkit-linear-gradient(bottom, rgb(123,133,135) 42%, rgb(1,0,5) 100%);">
 <div style="color: #f5f5f5; font-family: Arial; font-size: 24px;">
@@ -15,21 +16,21 @@
     </span>
 </div>
 
-
 <div style="color: #f5f5f5; font-family: Arial; font-size: 24px;">
     <center>
         <div style="padding-top: 50px;">
-        <span>
-            Number of barks
-        </span>
+            <span>
+                Number of barks
+            </span>
 
-        <div style="text-decoration: underline" id='fromServer'>
-            N/A
-        </div>
+            <div style="text-decoration: underline" id='fromServer'>
+                N/A
+            </div>
         </div>
 
         <div style="padding-top: 50px;">
             <img id="theImage" alt="Missing image">
+
             <div style="vertical-align:top;">
                 <img src="reload.png" alt="Missing image" onclick="getImage();" height="64px" width="64px">
             </div>
@@ -37,12 +38,11 @@
 
         <div style="padding-top: 50px;">
             <div>Send instruction</div>
-            <img height="64px" width="64px" src="playButton.png" onclick="playSong('1');" />
-            <img height="64px" width="64px" src="playButton.png" onclick="playSong('2');"/>
+            <span>Como</span><img height="64px" width="64px" src="playButton.png" onclick="playSong('1');"/>
+            <span>Nei</span><img height="64px" width="64px" src="playButton.png" onclick="playSong('2');"/>
+            <span>Gi faen</span><img height="64px" width="64px" src="playButton.png" onclick="playSong('3');"/>
         </div>
-
     </center>
 </div>
-
 </body>
 </html>

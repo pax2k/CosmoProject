@@ -4,8 +4,6 @@ import no.pax.cosmo.Util.Util;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-
 /**
  * Created: rak
  * Date: 02.10.12
@@ -13,12 +11,14 @@ import java.io.IOException;
 public class MusicClient extends AbstractClient {
     private static final String SONG_ONE = "src/main/resources/sounds/Song1.mp3";
     private static final String SONG_TWO = "src/main/resources/sounds/Song2.mp3";
+    private static final String SONG_THREE = "src/main/resources/sounds/Song3.mp3";
+
     private MP3Player player;
     private Thread playThread = null;
 
     public MusicClient()
             throws Exception {
-        super(Util.WEB_MUSIC_CLIENT_NAME);
+        super(Util.MUSIC_CLIENT_NAME);
     }
 
     public static void main(String... arg) throws Exception {
@@ -30,7 +30,7 @@ public class MusicClient extends AbstractClient {
 
         try {
             final String from = String.valueOf(object.get("from"));
-            if (from.equals("SERVER")) {
+            if (Util.SERVER_NAME.equals(from)) {
                 System.out.println("MusicClient registration done");
             } else if (from.equals(Util.WEB_VIEW_CLIENT_NAME)) {
                 final String value = Util.getValueFromJSon(object, "value");
@@ -42,6 +42,8 @@ public class MusicClient extends AbstractClient {
                     musicPath = SONG_ONE;
                 } else if (value.equals("2")) {
                     musicPath = SONG_TWO;
+                } else if (value.equals("3")) {
+                    musicPath = SONG_THREE;
                 }
 
                 playMusic(musicPath);

@@ -30,7 +30,7 @@ public class WebCamClient extends AbstractClient {
         try {
             final Object from = jsonObject.get("from");
 
-            if (from.equals("SERVER")) {
+            if (Util.SERVER_NAME.equals(from)) {
                 System.out.println("WebCamClient added as client");
             } else {
                 final byte[] newImage = webCam.getSnapShot();

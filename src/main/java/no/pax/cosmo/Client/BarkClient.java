@@ -28,7 +28,7 @@ public class BarkClient extends AbstractClient implements BarkListener {
         final JSONObject jsonObject = Util.convertToJSon(data);
         try {
             final String from = String.valueOf(jsonObject.get("from"));
-            if (from.equals("SERVER")) {
+            if (Util.SERVER_NAME.equals(from)) {
                 System.out.println("BarkClient registration done");
             } else if (from.equals(Util.WEB_VIEW_CLIENT_NAME)) {
                 newNumberOfBarks();

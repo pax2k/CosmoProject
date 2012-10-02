@@ -27,7 +27,7 @@ public abstract class AbstractClient implements WebSocket.OnTextMessage {
 
     public void onOpen(Connection connection) {
         try {
-            final String sendStringAsJSon = Util.getSendStringAsJSon("SERVER", registrationName, registrationName);
+            final String sendStringAsJSon = Util.getSendStringAsJSon(Util.SERVER_NAME, registrationName, registrationName);
             connection.sendMessage(sendStringAsJSon);
         } catch (IOException e) {
             e.printStackTrace();
@@ -35,7 +35,6 @@ public abstract class AbstractClient implements WebSocket.OnTextMessage {
     }
 
     public void onClose(int i, String s) {
-
     }
 
     public abstract void onMessage(String s);
