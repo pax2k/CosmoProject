@@ -25,6 +25,8 @@ public abstract class AbstractClient implements WebSocket.OnTextMessage {
         }
     }
 
+    public abstract void onMessage(String s);
+
     public void onOpen(Connection connection) {
         try {
             final String sendStringAsJSon = Util.getSendStringAsJSon(Util.SERVER_NAME, registrationName, registrationName);
@@ -37,7 +39,9 @@ public abstract class AbstractClient implements WebSocket.OnTextMessage {
     public void onClose(int i, String s) {
     }
 
-    public abstract void onMessage(String s);
+    public void disconnect() throws IOException {
+        connection.disconnect();
+    }
 
     private Connection getConnection() throws Exception {
         WebSocketClientFactory factory = new WebSocketClientFactory();
@@ -53,9 +57,5 @@ public abstract class AbstractClient implements WebSocket.OnTextMessage {
         final String connectionPath = "ws://" + host + ":" + port + "/cosmo/";
 
         return connection = client.open(new URI(connectionPath), this).get();
-    }
-
-    public void disconnect() throws IOException {
-        connection.disconnect();
     }
 }

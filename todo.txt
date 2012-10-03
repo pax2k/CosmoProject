@@ -1,10 +1,13 @@
+MongoDBConnector:
+Handle that service is down
+
 Web/clients:
 Handle reconnect
 Implement "ping" (if needed)
 Refactor all music-playing clients to use the same mp3-player
 
 Javascript:
-Gather all constants to a var field
+DONE Gather all constants to a var field
 
 Server:
 DONE Create a map of ID and connection in order to send messages directly

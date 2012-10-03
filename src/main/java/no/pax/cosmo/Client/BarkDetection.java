@@ -24,7 +24,6 @@ public class BarkDetection {
     private AudioFormat audioFormat;
     private TargetDataLine targetDataLine;
     private Clip clip;
-    private int barkCounter = 0;
 
     public BarkDetection(BarkListener listener) {
         this.listener = listener;
@@ -103,8 +102,7 @@ public class BarkDetection {
                     calculateLevel(buffer, 0, 0);
 
                     if (readLevel > 0.8f) {
-                        barkCounter ++;
-                        listener.newNumberOfBarks();
+                        listener.newNumberOfBarks(true);
 
                         if (clip != null && !clip.isRunning()) {
                             System.out.println("Bark detected and no player started. Play music");
@@ -173,8 +171,4 @@ public class BarkDetection {
             }
         }
     } // calculateLevel
-
-    public int getBarkCounter() {
-        return barkCounter;
-    }
 }

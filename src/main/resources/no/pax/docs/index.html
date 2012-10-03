@@ -1,13 +1,14 @@
 <html>
 <head>
-    <title>Raymond</title>
+    <title>Cosmo watch</title>
     <script type='text/javascript' src="cosmo.js"></script>
     <link rel="stylesheet" type="text/css" href="cosmo.css"/>
 </head>
 
 <body onload="init();"
       style="background-image: -webkit-linear-gradient(bottom, rgb(123,133,135) 42%, rgb(1,0,5) 100%);">
-<div style="color: #f5f5f5; font-family: Arial; font-size: 24px;">
+
+<div style="color: #deb887; font-family: Arial; font-size: 16px;">
     <span>
         Connection status:&nbsp;
     </span>
@@ -16,33 +17,55 @@
     </span>
 </div>
 
-<div style="color: #f5f5f5; font-family: Arial; font-size: 24px;">
-    <center>
-        <div style="padding-top: 50px;">
-            <span>
-                Number of barks
-            </span>
+<div style="padding-top: 50px; color: #f5f5f5; font-family: Arial; font-size: 24px;">
+    <hr>
+    <img id="theImage" src="webCam.png" alt="Missing image">
 
-            <div style="text-decoration: underline" id='fromServer'>
-                N/A
-            </div>
+    <div style="vertical-align:top;">
+        <img src="reload.png" alt="Missing image" onclick="getImage();" height="64px" width="64px">
+    </div>
+</div>
+
+<div style="padding-top: 50px; color: #f5f5f5; font-family: Arial; font-size: 24px;">
+   <hr>
+    <span>
+       Number of barks:&nbsp;
+    </span>
+
+    <span style="text-decoration: underline" id='fromServer'>
+        N/A
+    </span>
+</div>
+
+<div style="padding-top: 50px; color: #f5f5f5; font-family: Arial; font-size: 24px;">
+    <hr>
+    <div style="padding-bottom: 30px;">Send instruction</div>
+
+    <div style="width: 100px; float: left; font-size: 18px;">
+        <div>Como</div>
+        <div>
+            <img height="64px" width="64px" src="playButton.png" onclick="playSong('1');"/>
         </div>
+    </div>
 
-        <div style="padding-top: 50px;">
-            <img id="theImage" alt="Missing image">
-
-            <div style="vertical-align:top;">
-                <img src="reload.png" alt="Missing image" onclick="getImage();" height="64px" width="64px">
-            </div>
+    <div style="width: 100px; float: left; font-size: 18px;">
+        <div>Nei</div>
+        <div>
+            <img height="64px" width="64px" src="playButton.png" onclick="playSong('2');"/>
         </div>
+    </div>
 
-        <div style="padding-top: 50px;">
-            <div>Send instruction</div>
-            <span>Como</span><img height="64px" width="64px" src="playButton.png" onclick="playSong('1');"/>
-            <span>Nei</span><img height="64px" width="64px" src="playButton.png" onclick="playSong('2');"/>
-            <span>Gi faen</span><img height="64px" width="64px" src="playButton.png" onclick="playSong('3');"/>
+    <div style="width: 100px; float: left; font-size: 18px;">
+        <div>Gi faen</div>
+        <div>
+            <img height="64px" width="64px" src="playButton.png" onclick="playSong('3');"/>
         </div>
-    </center>
+    </div>
+</div>
+
+<div style="padding-top: 80px; clear:both; font-size: 16px;">
+    <hr>
+    Created by Raymond Koteng
 </div>
 </body>
 </html>

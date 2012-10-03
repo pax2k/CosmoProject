@@ -3,6 +3,9 @@ package no.pax.cosmo.Util;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 /**
  * Created: rak
  * Date: 29.09.12
@@ -18,7 +21,7 @@ public class Util {
 
     public static JSONObject convertToJSon(String data) {
         try {
-           // String data = "{register : raymond}";
+            // String data = "{register : raymond}";
             return new JSONObject(data);
         } catch (JSONException e) {
             e.printStackTrace();
@@ -27,7 +30,7 @@ public class Util {
         return null;
     }
 
-    public static String getValueFromJSon(JSONObject object, String wantedValueKey){
+    public static String getValueFromJSon(JSONObject object, String wantedValueKey) {
         String returnString = null;
         try {
             returnString = object.get(wantedValueKey).toString();
@@ -53,5 +56,14 @@ public class Util {
         }
 
         return returnString;
+    }
+
+    public static String getTodayDate() {
+        Calendar calendar = new GregorianCalendar();
+        final String year = String.valueOf(calendar.get(Calendar.YEAR));
+        final String month = String.valueOf(calendar.get(Calendar.MONTH));
+        final String dayOFWeek = String.valueOf(calendar.get(Calendar.DAY_OF_WEEK));
+
+        return year + ":" + month + ":" + dayOFWeek;
     }
 }

@@ -5,5 +5,5 @@ package no.pax.cosmo.Client;
  * Date: 28.09.12
  */
 public interface BarkListener {
-    void newNumberOfBarks();
+    void newNumberOfBarks(boolean updateValue);
 }

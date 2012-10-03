@@ -37,8 +37,4 @@ public class MP3Player {
 
         player.close();
     }
-
-    public boolean isPlaying() {
-        return player.isComplete();
-    }
 }
