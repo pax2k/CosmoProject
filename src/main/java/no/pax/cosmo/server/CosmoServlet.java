@@ -42,6 +42,9 @@ public class CosmoServlet extends HttpServlet {
                 return null;
             }
         });
+
+        int maxTextMessageSize = 32 * 1024; // default are 16 * 1024, need more space in order to send images.
+        _wsFactory.setMaxTextMessageSize(maxTextMessageSize);
         _wsFactory.setMaxIdleTime(Util.DEFAULT_IDLE_TIME);
     }
 

@@ -100,9 +100,12 @@ public final class WebCam  {
     }
 
     private static BufferedImage resizeImage(BufferedImage originalImage, int type){
-        BufferedImage resizedImage = new BufferedImage(200, 150, type);
+        final int width = 320;
+        final int height = 240;
+
+        BufferedImage resizedImage = new BufferedImage(width, height, type);
         Graphics2D g = resizedImage.createGraphics();
-        g.drawImage(originalImage, 0, 0, 200, 150, null);
+        g.drawImage(originalImage, 0, 0, width, height, null);
         g.dispose();
 
         return resizedImage;

@@ -1,6 +1,9 @@
 MongoDBConnector:
 Handle that service is down
 
+Webcam:
+DONE Send larger image, can be a bug in Jetty.
+
 Web/clients:
 Handle reconnect
 Implement "ping" (if needed)
